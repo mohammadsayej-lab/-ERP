@@ -21,6 +21,9 @@ public static class ServiceCollectionExtensions
         services.AddScoped<IJournalEntryService, JournalEntryService>();
         services.AddScoped<IChartOfAccountsService, ChartOfAccountsService>();
         services.AddScoped<ISalarySlipService, SalarySlipService>();
+        services.AddScoped<IPayrollAccountMappingService, PayrollAccountMappingService>();
+        services.AddScoped<IReportService, ReportService>();
+        services.AddScoped<IAuditService, AuditService>();
 
         return services;
     }
