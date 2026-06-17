@@ -19,6 +19,8 @@ public static class ServiceCollectionExtensions
         // Register application services
         services.AddScoped<IEmployeeService, EmployeeService>();
         services.AddScoped<IJournalEntryService, JournalEntryService>();
+        services.AddScoped<IChartOfAccountsService, ChartOfAccountsService>();
+        services.AddScoped<ISalarySlipService, SalarySlipService>();
 
         return services;
     }
