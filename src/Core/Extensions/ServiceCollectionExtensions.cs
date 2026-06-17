@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Core.Services;
 
 namespace Core.Extensions;
 
@@ -14,6 +15,10 @@ public static class ServiceCollectionExtensions
 
         // Register FluentValidation
         services.AddValidatorsFromAssembly(typeof(ServiceCollectionExtensions).Assembly);
+
+        // Register application services
+        services.AddScoped<IEmployeeService, EmployeeService>();
+        services.AddScoped<IJournalEntryService, JournalEntryService>();
 
         return services;
     }
